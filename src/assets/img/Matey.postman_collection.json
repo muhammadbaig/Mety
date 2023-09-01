@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "95380192-ec42-440e-b5c5-c83aaae7a4dc",
+		"name": "Matey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userIdentity\": \"mk1411997@gmail.com\",\r\n  \"password\": \"12345678Za@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:59123/api/Authenticate/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59123",
+					"path": [
+						"api",
+						"Authenticate",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestTokenCall",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTUyNzA0ODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTkxMjMiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjU5MTIzIn0.lcWqOIb6tHkr3oICH_oi43el7gBOeZ471e52VWHEsic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59123/api/Authenticate/Get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59123",
+					"path": [
+						"api",
+						"Authenticate",
+						"Get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllInterests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://544be2399036.ngrok.io/api/Authenticate/GetAllInterests",
+					"protocol": "https",
+					"host": [
+						"544be2399036",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"Authenticate",
+						"GetAllInterests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTUyNzA0ODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTkxMjMiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjU5MTIzIn0.lcWqOIb6tHkr3oICH_oi43el7gBOeZ471e52VWHEsic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"groupName\": \"Smokers\",\r\n  \"membersLimit\": 20,\r\n  \"groupType\": \"public\",\r\n  \"createdOn\": \"14/02/2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:59123/api/Group/CreateNewGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59123",
+					"path": [
+						"api",
+						"Group",
+						"CreateNewGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGroupsByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTUyOTQwODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTkxMjMiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjU5MTIzIn0.KuPlQs_JRhMs512v6fZMwX7ElZVCY8n_CxCBEc-jIww",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://a5dfd23a1bab.ngrok.io/api/Group/GetGroupsByUser",
+					"protocol": "http",
+					"host": [
+						"a5dfd23a1bab",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"Group",
+						"GetGroupsByUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGroupByUserInterest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTUyODE0NjcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTkxMjMiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjU5MTIzIn0.oC5fZc2HkJEcfpw-IYt5VMeCPbvdiWjnEDJ51roRnSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://a5dfd23a1bab.ngrok.io/api/Group/GetGroupByUserInterest",
+					"protocol": "http",
+					"host": [
+						"a5dfd23a1bab",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"Group",
+						"GetGroupByUserInterest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userIdentity\": \"mateyofficial21@gmail.com\",\r\n  \"password\": \"Hotech66@\",\r\n  \"fcmToken\": \"12345654\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Authenticate/Login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Authenticate",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAdminDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/GetAdminDetails",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"GetAdminDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/GetAdminDetails",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"GetAdminDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllGroups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/GetAllGroups?page=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"GetAllGroups"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFlaggedMessages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/GetFlaggedMessages",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"GetFlaggedMessages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3,\r\n  \"fullName\": \"GiGi.\",\r\n  \"gender\": \"Female\",\r\n  \"dateOfBirth\": \"01/01/2000\",\r\n  \"email\": \"mateyofficial21@gmail.com\",\r\n  \"phone\": \"03005290620\",\r\n  \"aboutMe\": \"I am admin of matey social app\",\r\n  \"profilePicPath\": \"admin-profile-image.jpeg\",\r\n  \"backgroundImagePath\": \"default\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/EditAdmin",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"EditAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BlockUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/BlockUser?userId=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"BlockUser"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BlockGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/BlockGroup?groupId=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"BlockGroup"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/DeleteGroup?groupId=13",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"DeleteGroup"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteGroup Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Admin/DeleteGroup?groupId=13",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Admin",
+						"DeleteGroup"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

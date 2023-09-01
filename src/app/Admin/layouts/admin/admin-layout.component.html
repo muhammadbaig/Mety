@@ -1,0 +1,20 @@
+<style>
+    .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active {
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #4caf50;
+    background-color: #2e5b01 !important;
+    color: #FFFFFF;
+}
+</style>
+<div class="wrapper">
+    <div class="sidebar" data-color="green"  >
+        <app-sidebar-cmp></app-sidebar-cmp>
+        <div class="sidebar-background" style="background-color:#000000;"></div>
+    </div>
+    <div class="main-panel">
+        <app-navbar-cmp></app-navbar-cmp>
+        <router-outlet></router-outlet>
+        <div *ngIf="!isMap()">
+            <app-footer-cmp></app-footer-cmp>
+        </div>
+    </div>
+</div>

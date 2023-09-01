@@ -1,0 +1,125 @@
+<style>
+  .adminportal{
+    top: 170px;
+left: 1089px;
+width: 200px;
+height: 65px;
+background: transparent linear-gradient(270deg, #c21313 0%, #c21313 100%) 0% 0% no-repeat padding-box;
+border-radius: 33px 0px 0px 33px;
+opacity: 1;
+padding:10px 14px; 
+color:white; 
+}
+.register-page .card-signup
+{
+  padding: 36px 0px !important;
+}
+.inputfield{
+  border: 1px solid #E9E9F0;
+border-radius: 7px !important;
+    padding-left: 34px !important;
+height: 45px !important;
+}
+.form-control, .is-focused .form-control {
+    background-image:none !important;
+}
+.input-group-prepend {
+    margin-right: -44px !important;
+}
+.register-page .card-signup .form-group {
+    margin: 15px 7px 0px 7px !important;
+}
+.forgotpassword
+{
+  text-align: center;
+text-decoration: underline;
+font: normal normal normal 16px/30px Cabin;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-right: 10px;
+}
+.login-page .page-header .container, .lock-page .page-header .container {
+    padding-top: 10vh !important;
+}
+.register-page .card-signup
+{
+margin-bottom: 0px !important;
+}
+.header-filter::before {
+    background: none !important;
+}
+</style>
+<div class="wrapper wrapper-full-page">
+  <div class="page-header register-page header-filter" filter-color="black" style="background-color:#f6f7f8; background-size: cover; background-position: top center;">
+    <div class="container mt-0">
+      <div class="row">
+        <div class="col-lg-5 col-md-8 col-sm-9 mt-0 ml-auto mr-auto">
+          <div class="card card-signup" style="margin-top: 1vh;">
+            <p class="text-right">
+              <span class="adminportal">Admin Portal</span>
+            </p>
+            <h2 class="card-title text-center mt-2"><img style="width :40%;" src="./assets/img/images/settinglogo.png"></h2>
+            <h3 class="text-center" style="text-align: left;letter-spacing: 0px;color: #000000;opacity: 1;">Welcome to <b>MATEY</b></h3>
+            <p class="text-center mb-0" *ngIf="step==1">
+              <i class="lockicon"><img src="./assets/img/images/lock.png"></i>
+           This is secure website <br> Please enter your username and password to login</p>
+        
+           <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+            <div class="card-body mt-0">
+              <div class="row">
+                <div class="col-md-12 ml-auto mr-auto">
+                  
+                  <form class="form"  [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="step==1">
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <img src="./assets/img/images/Ic_email.png" width="18">
+                          </span>
+                        </div>
+                        <input type="text" formControlName="username" class="form-control inputfield" placeholder="Email">
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback d-block pl-4">
+                          <div *ngIf="f.username.errors.required">Email is required</div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <img src="./assets/img/images/lock.png" width="18">
+                          </span>
+                        </div>
+                        <input type="password" formControlName="password" class="form-control inputfield" placeholder="Password...">
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback  d-block pl-4">
+                          <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="text-right"> 
+                      <a class="forgotpassword">Forgot Password?</a>
+
+                    </div> -->
+                    <div class="text-center">
+                      <button type="submit" [disabled]="loading" class="btn btn-info float-right" style="background: transparent linear-gradient(270deg, #c21313 0%, #c21313 100%) 0% 0% no-repeat padding-box;padding: 10px 40px;border-radius: 5px; opacity: 1;" class="btn btn-primary  mt-4">Login</button>
+
+                      <!-- <button (click)="login()" style="background: transparent linear-gradient(270deg, #68824F 0%, #000000 100%) 0% 0% no-repeat padding-box;padding: 10px 40px;border-radius: 5px; opacity: 1;" class="btn btn-primary  mt-4">log In</button> -->
+                    </div>
+                   
+                  </form>
+
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <footer></footer>
+</div>

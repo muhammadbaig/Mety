@@ -1,0 +1,125 @@
+<style>
+    .card .card-header-warning .card-icon,
+    .card .card-header-warning .card-text,
+    .card .card-header-warning:not(.card-header-icon):not(.card-header-text),
+    .card.bg-warning,
+    .card.card-rotate.bg-warning .front,
+    .card.card-rotate.bg-warning .back {
+        background: linear-gradient(60deg, #c21313, #c21313) !important;
+    }
+
+    .card .card-header-success .card-icon,
+    .card .card-header-success .card-text,
+    .card .card-header-success:not(.card-header-icon):not(.card-header-text),
+    .card.bg-success,
+    .card.card-rotate.bg-success .front,
+    .card.card-rotate.bg-success .back {
+        background: linear-gradient(60deg, #c21313, #c21313);
+    }
+</style>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">account_box</i>
+
+                        </div>
+                        <p class="card-category"></p>
+                        <h3 class="card-title">{{data.totalUsers}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            Total Users</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">account_box</i>
+
+                        </div>
+                        <p class="card-category"></p>
+                        <h3 class="card-title">{{data.activeUsers}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            Active Users</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">account_box</i>
+
+                        </div>
+                        <p class="card-category"></p>
+                        <h3 class="card-title">{{data.blockedUsers}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            Block Users</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">group</i>
+                        </div>
+                        <p class="card-category"></p>
+                        <h3 class="card-title">{{data.totalGroups}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            Total Groups </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">group</i>
+                        </div>
+
+                        <p class="card-category"></p>
+                        <h3 class="card-title">{{data.blockedGroups}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats"> Block Groups</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">group</i>
+                        </div>
+                        <p class="card-category"></p>
+                        <h3 class="card-title">{{data.activeGroups}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats"> Active Groups</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
